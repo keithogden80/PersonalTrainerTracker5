@@ -3,7 +3,6 @@
           package="com.bignerdranch.android.personaltrainertracker">
 
     <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-
     <uses-permission android:name="android.permisson.CAMERA"/>
     <uses-permission android:name="android.permisson.WRITE_EXTERNAL_STORAGE"/>
 
@@ -20,15 +19,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
 
         </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+
+
+
+
+        </activity>
+        <activity android:name=".AddUserActivity">
+
+
+        </activity>
+        <activity android:name=".CustomerSession">
+        </activity>
+        <activity android:name=".CustomerListActivity">
+        </activity>
+        <activity android:name=".SignSessionActivity">
+        </activity>
+        <activity android:name=".ReceiptActivity">
         </activity>
     </application>
 

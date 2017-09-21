@@ -5,22 +5,20 @@ import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.MenuItemHoverListener;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class CustomerSession extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_customer_session);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         getMenuInflater().inflate(R.menu.main_menu, menu);
-        //menu.findItem(R.menu.main_menu_item);
         return true;
     }
     public void dialog(){
@@ -36,23 +34,13 @@ public class MainActivity extends AppCompatActivity {
 
                 }).create().show();
     }
-    public void onClickAddCustomer(View view){
-        Intent intent = new Intent(MainActivity.this, AddUserActivity.class);
-        startActivity(intent);
-
-    }
-    public void onClickCustomerList(View view){
-        Intent intent = new Intent(MainActivity.this, CustomerListActivity.class);
-        startActivity(intent);
-    }
-    public void onClickCustomerSession(View view){
-        Intent intent = new Intent(MainActivity.this, CustomerSession.class);
-        startActivity(intent);
-
-    }
-
     public void onClickSign(View view){
-        Intent intent = new Intent(MainActivity.this, SignSessionActivity.class);
+        Intent intent = new Intent(CustomerSession.this, SignSessionActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickBuy(View view){
+        Intent intent = new Intent(CustomerSession.this, ReceiptActivity.class);
         startActivity(intent);
     }
     @Override
@@ -71,4 +59,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

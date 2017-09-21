@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bignerdranch.android.personaltrainertracker.SignSessionActivity">
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Signature Input"
+        tools:layout_editor_absoluteX="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/fragment4"
+        tools:ignore="MissingConstraints"/>
+
+    <EditText
+        android:id="@+id/editText14"
+        android:layout_width="99dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="LastName,"
+        tools:layout_editor_absoluteY="78dp"
+        app:layout_constraintRight_toLeftOf="@+id/editText15"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints"/>
+
+    <EditText
+        android:id="@+id/editText15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="FirstName"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="75dp"
+        tools:ignore="MissingConstraints"/>
+
+    <EditText
+        android:id="@+id/editText16"
+        android:layout_width="85dp"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Session:"
+        android:layout_marginTop="21dp"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/editText17"
+        android:layout_marginRight="8dp"/>
+
+    <EditText
+        android:id="@+id/editText17"
+        android:layout_width="151dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="date"
+        tools:layout_editor_absoluteY="260dp"
+        tools:layout_editor_absoluteX="101dp"/>
+
+    <EditText
+        android:id="@+id/editText18"
+        android:layout_width="290dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sign to acknowledge completion:"
+        tools:layout_editor_absoluteY="312dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="8dp"
+        tools:ignore="MissingConstraints"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+    </android.support.design.widget.TextInputLayout>
+
+    <EditText
+        android:id="@+id/editText19"
+        android:layout_width="365dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText18"/>
+
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.bignerdranch.android.personaltrainertracker.LoggedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_logged_in"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="118dp"
+        android:layout_height="113dp"
+        app:srcCompat="@mipmap/contact_icon"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText14"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickSigned"
+        android:text="Submit"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/editText19"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+</android.support.constraint.ConstraintLayout>
