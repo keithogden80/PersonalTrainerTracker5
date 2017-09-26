@@ -34,10 +34,7 @@ public class SignSessionActivity extends AppCompatActivity {
 
                 }).create().show();
     }
-    public void onClickSigned(View view){
-        Intent intent = new Intent(SignSessionActivity.this, CustomerListActivity.class);
-        startActivity(intent);
-    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         int id = item.getItemId();

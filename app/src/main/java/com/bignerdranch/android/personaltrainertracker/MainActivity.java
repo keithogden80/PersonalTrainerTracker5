@@ -1,5 +1,6 @@
 package com.bignerdranch.android.personaltrainertracker;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
@@ -9,6 +10,12 @@ import android.support.v7.widget.MenuItemHoverListener;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+
+import com.bignerdranch.android.personaltrainertracker.database.CustomerBaseHelper;
+
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,22 +43,22 @@ public class MainActivity extends AppCompatActivity {
 
                 }).create().show();
     }
-    public void onClickAddCustomer(View view){
+    public void onClickAddCustomer1 (View view){
         Intent intent = new Intent(MainActivity.this, AddUserActivity.class);
         startActivity(intent);
 
     }
-    public void onClickCustomerList(View view){
+    public void onClickCustomerList1 (View view){
         Intent intent = new Intent(MainActivity.this, CustomerListActivity.class);
         startActivity(intent);
     }
-    public void onClickCustomerSession(View view){
+    public void onClickCustomerSession1 (View view){
         Intent intent = new Intent(MainActivity.this, CustomerSession.class);
         startActivity(intent);
 
     }
 
-    public void onClickSign(View view){
+    public void onClickSign1 (View view){
         Intent intent = new Intent(MainActivity.this, SignSessionActivity.class);
         startActivity(intent);
     }
@@ -70,5 +77,15 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return super.onOptionsItemSelected(item);
+    }
+    private List<Customer> mCustomers;
+    private Context mContext;
+    private SQLite Database mDatabase;
+
+    private  MainActivity(Context context) {
+        mContext = context.getApplicaionContext();
+        mDatabase = new CustomerBaseHelper(mcontext)
+                .getWriteableDatabase();
+        mCustomers = new List<MainActivity>();
     }
 }
